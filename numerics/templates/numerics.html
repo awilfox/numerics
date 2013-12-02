@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Numerics{% endblock %}
+{% block body %}
+    <h1 class="page-header">Numerics</h1>
+    <div id="add_form" class="jqce">
+    <form action="/numerics" method="POST">
+      <fieldset>
+        <legend>Numeric details</legend>
+        <input type="text" name="numeric" placeholder="###" maxlength="3" size="5"><br>
+        <textarea name="purpose" rows="2" cols="76"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Vendors/Names</legend>
+        <div id="vendor_name_container"></div>
+        <button class="btn btn-small" name="add_name" id="add_name">Add Vendor/Name</button>
+      </fieldset>
+      <br>
+      <fieldset>
+        <input type="submit" class="btn btn-success" value="Add Numeric" name="add">
+      </fieldset>
+    </form>
+    </div>
+<!--    <button class="btn btn-small" name="show_form" id="show_form">Add Numeric</button> -->
+    <dl>
+    {% for numeric in numerics %}
+      <dt><a href="/numerics/id{{numeric.numeric_id}}"><em>{{numeric.numeric}}</em> &mdash; {% for name, vendor in numeric.pretty_vendor_numerics().items() %}{{name}} (<i>{{vendor}}</i>) {% endfor %}</a></dt>
+      <dd>{{numeric.purpose}}</dd>
+    {% endfor %}
+    </dl>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+function vendor_dropdown()
+{
+  return '<select name="vendors"> {% for v in vendors %}<option value="{{v.vendor_id}}">{{v.vendor}}</option>{% endfor %} </select>';
+}
+
+function build_vendor_name_partial()
+{
+  return $('<div class="jqce">' + vendor_dropdown() + ' <input type="text" name="names" placeholder="This vendor\'s name"><span class="remove_this">&times;</span></div>');
+}
+
+$('#vendor_name_container').on('click', '.remove_this', function(e) {
+  var $p = $(this).parent();
+  $p.fadeOut();
+  $p.remove();
+});
+
+$('#add_name').click(function(e) {
+  var $partial = build_vendor_name_partial();
+  $('#vendor_name_container').append($partial);
+  $partial.fadeIn();
+  e.preventDefault();
+});
+
+$('#show_form').click(function(e) {
+  $('#add_form').fadeIn();
+  $('#show_form').hide();
+});
+    </script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Conflicts{% endblock %}
+{% block body %}
+    <h1 class="page-header">Conflicts</h1>
+    <table class="table table-condensend table-striped">
+      <thead><tr><td>Numeric</td><td>Names / IRCd</td><td>Purpose</td></tr></thead>
+      <tbody>
+      {% for n in numerics %}
+        {% for numeric in n %}
+        <tr>
+          {% if loop.first %}<td rowspan="{{loop.length}}">{{numeric.numeric}}</td>{% endif %}
+          <td>{% for name, vendors in numeric.pretty_vendor_numerics().items() %}{{name}} ({{vendors}}){% if not loop.last %}, {% endif %}{% endfor %}</td>
+          <td>{{ numeric.purpose }}</td>
+        </tr>
+        {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

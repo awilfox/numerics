@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Disambiguation page - Numeric {{n}}{% endblock %}
+{% block body %}
+    <h1 class="page-header">{{n}} has multiple meanings</h1>
+    <dl>
+    {% for numeric in model %}
+      <dt><a href="/numerics/id{{numeric.numeric_id}}">{% for name, vendors in numeric.pretty_vendor_numerics().items() %}{{ name }} ({{vendors}}){% endfor %}</a></dt>
+      <dd>{{numeric.purpose}}</dd>
+    {% endfor %}
+    </dl>
+{% endblock %}

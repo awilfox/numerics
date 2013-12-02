@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Numeric {{numeric.numeric}}{% endblock %}
+{% block body %}
+    <h1 class="page-header">{{numeric.numeric}}</h1>
+    {% for name,vendors in numeric.pretty_vendor_numerics().items() %}
+    <h2>{{name}} <small>({{vendors}}</small></h2>
+    {% endfor %}
+{% endblock %}

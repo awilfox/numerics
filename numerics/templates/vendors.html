@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Vendors{% endblock %}
+{% block body %}
+    <h1 class="page-header">Vendors</h1>
+    <table class="table table-condensed table-striped table-hover">
+      <thead><tr><td>Name</td><td></td></tr></thead>
+      <tbody>
+        <tr><form action="/vendors" method="POST" class="form-inline"><td><input type="text" name="name" placeholder="Name"></td><td><input type="submit" name="add" value="Add Vendor"></td></tr>
+        {% for vendor in vendors %}
+        <tr><td colspan="2"><a href="/vendors/{{vendor.vendor}}">{{vendor.vendor}}</a></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,201 @@
+001 RPL_WELCOME 2812, not 1459
+002 RPL_YOURHOSTIS 2812, not 1459
+003 RPL_SERVERCREATED 2812, not 1459
+004 RPL_SERVERVERSION 2812, not 1459
+005 RPL_ISUPPORT not RFC, extremely common though (defined as RPL_BOUNCE in 2812, widely ignored)
+006 RPL_MAP unrealircd
+007 RPL_ENDMAP unrealircd
+008 RPL_SNOMASKIS unrealircd
+042 RPL_YOURUUID taken from ircnet
+211 <unknown>
+218 <unknown>
+221 RPL_UMODEIS
+232 RPL_RULES unrealircd
+249 <unknown>
+251 <unknown>
+252 <unknown>
+253 <unknown>
+254 <unknown>
+255 <unknown>
+256 RPL_ADMINME
+257 RPL_ADMINLOC1
+258 RPL_ADMINLOC2
+259 RPL_ADMINEMAIL
+265 <unknown>
+266 <unknown>
+270 RPL_MAPUSERS insp-specific
+271 <unknown>
+272 <unknown>
+276 <unknown>
+281 <unknown>
+282 <unknown>
+290 <unknown>
+292 <unknown>
+301 <unknown>
+304 RPL_SYNTAX insp-specific
+305 RPL_UNAWAY
+306 RPL_NOWAWAY
+307 <unknown>
+308 RPL_RULESTART unrealircd
+309 RPL_RULESEND unrealircd
+310 <unknown>
+311 <unknown>
+312 <unknown>
+313 <unknown>
+314 <unknown>
+315 <unknown>
+317 <unknown>
+318 <unknown>
+319 <unknown>
+320 <unknown>
+321 <unknown>
+322 <unknown>
+323 <unknown>
+324 RPL_CHANNELMODEIS
+329 RPL_CHANNELCREATED ???
+330 <unknown>
+331 RPL_NOTOPICSET
+332 RPL_TOPIC
+333 RPL_TOPICTIME not RFC, extremely common though
+335 <unknown>
+336 <unknown>
+341 RPL_INVITING
+345 RPL_INVITED gamesurge
+346 RPL_INVITELIST insp-specific (stolen from ircu)
+347 RPL_ENDOFINVITELIST insp-specific (stolen from ircu)
+351 RPL_VERSION
+353 RPL_NAMREPLY
+364 <unknown>
+365 <unknown>
+366 RPL_ENDOFNAMES
+367 <unknown>
+368 <unknown>
+369 <unknown>
+371 RPL_INFO
+372 RPL_MOTD
+374 RPL_ENDOFINFO
+375 RPL_MOTDSTART
+376 RPL_ENDOFMOTD
+378 <unknown>
+379 <unknown>
+381 RPL_YOUAREOPER
+382 RPL_REHASHING
+384 <unknown>
+391 RPL_TIME
+396 RPL_YOURDISPLAYEDHOST from charybdis/etc, common convention
+401 ERR_NOSUCHNICK
+402 ERR_NOSUCHSERVER
+403 ERR_NOSUCHCHANNEL used to indicate an invalid channel name also, so don't rely on RFC text (don't do that anyway!)
+404 ERR_CANNOTSENDTOCHAN
+405 ERR_TOOMANYCHANNELS
+406 <unknown>
+410 ERR_INVALIDCAPSUBCOMMAND ratbox/charybdis(?)
+412 <unknown>
+415 <unknown>
+420 <unknown>
+421 ERR_UNKNOWNCOMMAND
+422 ERR_NOMOTD
+432 <unknown>
+433 <unknown>
+434 ERR_NORULES unrealircd
+441 ERR_USERNOTINCHANNEL
+442 ERR_NOTONCHANNEL
+443 ERR_USERONCHANNEL
+447 ERR_CANTCHANGENICK unrealircd, probably
+451 ERR_NOTREGISTERED
+455 <unknown>
+456 <unknown>
+457 <unknown>
+458 <unknown>
+461 ERR_NEEDMOREPARAMS
+462 ERR_ALREADYREGISTERED
+468 <unknown>
+470 <unknown>
+471 ERR_CHANNELISFULL
+473 ERR_INVITEONLYCHAN
+474 ERR_BANNEDFROMCHAN
+475 ERR_BADCHANNELKEY
+477 <unknown>
+478 <unknown>
+480 <unknown>
+481 ERR_NOPRIVILEGES rfc, beware though, we use this for other things opers may not do also
+482 ERR_CHANOPRIVSNEEDED rfc, beware though, we use this for other things like trying to kick a uline
+484 <unknown>
+485 <unknown>
+489 <unknown>
+490 ERR_ALLMUSTSSL unrealircd
+491 <unknown>
+492 ERR_NOCTCPALLOWED XXX: bzzzz. 1459 defines this as ERR_NOSERVICEHOST, research it more and perhaps change this! (ERR_CANNOTSENDTOCHAN?)
+493 <unknown>
+494 <unknown>
+495 ERR_DELAYREJOIN insp-specific, XXX: we should use 'resource temporarily unavailable' from ircnet/ratbox or whatever
+500 <unknown>
+501 ERR_UNKNOWNSNOMASK insp-specific
+502 ERR_USERSDONTMATCH
+505 <unknown>
+509 <unknown>
+512 <unknown>
+520 ERR_CANTJOINOPERSONLY unrealircd, but crap to have so many numerics for cant join..
+531 ERR_CANTSENDTOUSER ???
+600 <unknown>
+601 <unknown>
+602 <unknown>
+603 <unknown>
+604 <unknown>
+605 <unknown>
+606 <unknown>
+607 <unknown>
+608 <unknown>
+609 <unknown>
+670 <unknown>
+671 <unknown>
+690 <unknown>
+691 <unknown>
+702 RPL_COMMANDS insp-specific
+703 RPL_COMMANDSEND insp-specific
+710 <unknown>
+716 <unknown>
+717 <unknown>
+718 <unknown>
+742 <unknown>
+744 <unknown>
+900 <unknown>
+903 <unknown>
+904 <unknown>
+906 <unknown>
+926 <unknown>
+935 <unknown>
+936 ERR_WORDFILTERED insp-specific, would be nice if we could get rid of this..
+937 <unknown>
+938 <unknown>
+939 <unknown>
+942 <unknown>
+944 <unknown>
+945 <unknown>
+946 <unknown>
+947 <unknown>
+948 <unknown>
+950 <unknown>
+951 <unknown>
+952 <unknown>
+955 <unknown>
+957 <unknown>
+958 <unknown>
+959 <unknown>
+960 <unknown>
+972 ERR_CANTUNLOADMODULE insp-specific
+973 RPL_UNLOADEDMODULE insp-specific
+974 ERR_CANTLOADMODULE insp-specific
+975 RPL_LOADEDMODULE insp-specific
+988 <unknown>
+989 <unknown>
+990 <unknown>
+991 <unknown>
+992 <unknown>
+993 <unknown>
+994 <unknown>
+995 <unknown>
+996 <unknown>
+997 <unknown>
+998 <unknown>
+999 <unknown>

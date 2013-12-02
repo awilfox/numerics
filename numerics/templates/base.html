@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IRCv3 Numeric List - {% block title %}{%endblock%}</title>
+    <meta name="author" content="IRCv3 Working Group">
+    <meta name="generator" content="Flask">
+    <meta charset="utf-8">
+    <link href="/static/bootstrap.min.css" name="bootstrap" rel="stylesheet">
+    <link href="/static/application.css" name="custom" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/vendors">Vendors</a></li>
+            <li><a href="/numerics">Numerics</a></li>
+          </ul>
+        </div>
+      </div>
+{% block body %}{% endblock %}
+    </div>
+  </body>
+</html>

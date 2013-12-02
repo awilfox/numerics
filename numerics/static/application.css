@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* GLOBAL STYLES */
+
+@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+
+/* Larger table headers */
+thead {
+    font-size: larger;
+}
+
+/* jQuery created element (for fade-ins, and hidden objects) */
+.jqce {
+    display: none;
+}
+
+/* Group headings. */
+.group-heading {
+    font-weight: normal;
+    font-size: x-large;
+    width: 95%;
+    border-bottom: 1px solid grey;
+    background: white url(/assets/arrow-open.gif) no-repeat center left;
+    padding-left: 30px;
+}
+.group-heading-closed {
+    font-weight: normal;
+    font-size: x-large;
+    width: 95%;
+    border-bottom: 1px solid grey;
+    background: white url(/assets/arrow-closed.gif) no-repeat center left;
+    padding-left: 30px;
+}
+
+/* Native-appearing navbar. */
+.navbar-inner {
+    cursor: default;
+}
+
+/* We are everything to everyone. */
+* {
+    font-family: 'Source Sans Pro', /* native */
+                 'Segoe UI',        /* Vista+ */
+                 'Helvetica Neue',  /* OS X / iOS */
+                 'Calibri',         /* XP */
+                 'Droid Sans',      /* Android */
+                 'Tahoma',          /* pre-XP Windows */
+                 'Helvetica',       /* Unix */
+                 sans-serif;        /* fall-back */
+}
+
+/* Pretty headers */
+h1,h2,h3,h4,h5,h6 { font-weight: 400; }
+
+/* Remove silly margin from h2 in hero-unit */
+.hero-unit h2 {
+    margin-top: 0;
+}
+
+/* Fix Bootstrap's interference with native-appearance file fields in FF/Chrome */
+.un-stupid-file-field {
+    height: auto !important;
+}
+
+/* Larger-by-default Bootstrap tooltips. */
+div[class="tooltip-inner"] {
+    max-width: 220px;
+    width: 220px;
+}
