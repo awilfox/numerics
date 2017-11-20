@@ -1,7 +1,7 @@
-Copyright (c) 2013 Andrew Wilcox. All rights reserved.
+Copyright (c) 2013 A. Wilcox. All rights reserved.
 
 <pre>
-Developed by: Andrew Wilcox and contributors
+Developed by: A. Wilcox and contributors
               IRCv3 numeric site
               http://foxkit.us/numerics
 </pre>
